@@ -1,6 +1,6 @@
 function traerInformacionCategory() {
     $.ajax({
-        url: "http://localhost:8080/api/Category/all",
+        url: "http://150.230.72.66:8080/api/Category/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -39,7 +39,7 @@ function guardarInformacionCategory() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Category/save",
+            url: "http://150.230.72.66:8080/api/Category/save",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha agregado nueva categoría");
@@ -61,7 +61,7 @@ function seleccionarCategoria(id) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
-        url: "http://localhost:8080/api/Category/" + id,
+        url: "http://150.230.72.66:8080/api/Category/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             document.getElementById("idC").innerHTML = respuesta.id;
@@ -86,7 +86,7 @@ function editarInformacionCategory() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Category/update",
+            url: "http://150.230.72.66:8080/api/Category/update",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha actualizado la categoría");
@@ -111,7 +111,7 @@ function borrarCategoria(id) {
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
         data: JSON.stringify(categoria),
-        url: "http://localhost:8080/api/Category/" + id,
+        url: "http://150.230.72.66:8080/api/Category/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             alert("Se ha eliminado la categoría");
@@ -128,7 +128,7 @@ function borrarCategoria(id) {
 
 function traerInformacionBarco() {
     $.ajax({
-        url: "http://localhost:8080/api/Boat/all",
+        url: "http://150.230.72.66:8080/api/Boat/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -171,7 +171,7 @@ function guardarInformacionBarco() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Boat/save",
+            url: "http://150.230.72.66:8080/api/Boat/save",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha agregado nuevo barco");
@@ -200,7 +200,7 @@ function seleccionarBarco(id) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
-        url: "http://localhost:8080/api/Boat/" + id,
+        url: "http://150.230.72.66:8080/api/Boat/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             document.getElementById("idB").innerHTML = respuesta.id;
@@ -229,7 +229,7 @@ function editarInformacionBarco() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Boat/update",
+            url: "http://150.230.72.66:8080/api/Boat/update",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha actualizado el barco");
@@ -254,7 +254,7 @@ function borrarElementoBarco(id) {
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
         data: JSON.stringify(barco),
-        url: "http://localhost:8080/api/Boat/" + id,
+        url: "http://150.230.72.66:8080/api/Boat/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             alert("Se ha eliminado el barco");
@@ -270,7 +270,7 @@ function borrarElementoBarco(id) {
 
 function traerInformacion() {
     $.ajax({
-        url: "http://localhost:8080/api/Client/all",
+        url: "http://150.230.72.66:8080/api/Client/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -312,7 +312,7 @@ function guardarInformacion() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Client/save",
+            url: "http://150.230.72.66:8080/api/Client/save",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha agregado nuevo cliente");
@@ -334,7 +334,7 @@ function seleccionar(id) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
-        url: "http://localhost:8080/api/Client/" + id,
+        url: "http://150.230.72.66:8080/api/Client/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             document.getElementById("id").innerHTML = respuesta.idClient;
@@ -363,7 +363,7 @@ function editarInformacion(){
             contentType: "application/json; charset=utf-8",
             datatype:"JSON",
             data: JSON.stringify(nuevo),
-            url:"http://localhost:8080/api/Client/update",
+            url:"http://150.230.72.66:8080/api/Client/update",
             success:function(respuesta){
                 console.log(respuesta);
                 alert("Se ha actualizado el cliente");
@@ -388,7 +388,7 @@ function borrarElemento(id) {
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
         data: JSON.stringify(cliente),
-        url: "http://localhost:8080/api/Client/" + id,
+        url: "http://150.230.72.66:8080/api/Client/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             alert("Se ha eliminado el cliente");
@@ -404,7 +404,7 @@ function borrarElemento(id) {
 
 function traerInformacionMensaje() {
     $.ajax({
-        url: "http://localhost:8080/api/Message/all",
+        url: "http://150.230.72.66:8080/api/Message/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -441,7 +441,7 @@ function guardarInformacionMensaje() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Message/save",
+            url: "http://150.230.72.66:8080/api/Message/save",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha agregado nuevo mensaje");
@@ -463,7 +463,7 @@ function seleccionarMensaje(id) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
-        url: "http://localhost:8080/api/Message/" + id,
+        url: "http://150.230.72.66:8080/api/Message/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             document.getElementById("idM").innerHTML = respuesta.idMessage;
@@ -486,7 +486,7 @@ function editarInformacionMensaje(){
             contentType: "application/json; charset=utf-8",
             datatype:"JSON",
             data: JSON.stringify(nuevo),
-            url:"http://localhost:8080/api/Message/update",
+            url:"http://150.230.72.66:8080/api/Message/update",
             success:function(respuesta){
                 console.log(respuesta);
                 alert("Se ha actualizado el mensaje");
@@ -511,7 +511,7 @@ function borrarElementoMensaje(id) {
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
         data: JSON.stringify(mensaje),
-        url: "http://localhost:8080/api/Message/" + id,
+        url: "http://150.230.72.66:8080/api/Message/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             alert("Se ha eliminado el mensaje");
@@ -527,7 +527,7 @@ function borrarElementoMensaje(id) {
 
 function traerInformacionAdmin() {
     $.ajax({
-        url: "http://localhost:8080/api/Admin/all",
+        url: "http://150.230.72.66:8080/api/Admin/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -567,7 +567,7 @@ function guardarInformacionAdmin() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Admin/save",
+            url: "http://150.230.72.66:8080/api/Admin/save",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha agregado nuevo usuario");
@@ -589,7 +589,7 @@ function seleccionarAdmin(id) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
-        url: "http://localhost:8080/api/Admin/" + id,
+        url: "http://150.230.72.66:8080/api/Admin/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             document.getElementById("idA").innerHTML = respuesta.idAdmin;
@@ -602,7 +602,7 @@ function seleccionarAdmin(id) {
 
 function traerInformacionReserva() {
     $.ajax({
-        url: "http://localhost:8080/api/Reservation/all",
+        url: "http://150.230.72.66:8080/api/Reservation/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -643,7 +643,7 @@ function guardarInformacionReserva() {
             contentType: "application/json; charset=utf-8",
             datatype: "JSON",
             data: JSON.stringify(nuevo),
-            url: "http://localhost:8080/api/Reservation/save",
+            url: "http://150.230.72.66:8080/api/Reservation/save",
             success: function (respuesta) {
                 console.log(respuesta);
                 alert("Se ha agregado nueva reserva");
@@ -665,7 +665,7 @@ function seleccionarReserva(id) {
         type: "GET",
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
-        url: "http://localhost:8080/api/Reservation/" + id,
+        url: "http://150.230.72.66:8080/api/Reservation/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             document.getElementById("idR").innerHTML = respuesta.idReservation;
@@ -690,7 +690,7 @@ function editarInformacionReserva(){
             contentType: "application/json; charset=utf-8",
             datatype:"JSON",
             data: JSON.stringify(nuevo),
-            url:"http://localhost:8080/api/Reservation/update",
+            url:"http://150.230.72.66:8080/api/Reservation/update",
             success:function(respuesta){
                 console.log(respuesta);
                 alert("Se ha actualizado la reserva");
@@ -715,7 +715,7 @@ function borrarElementoReserva(id) {
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
         data: JSON.stringify(reserva),
-        url: "http://localhost:8080/api/Reservation/" + id,
+        url: "http://150.230.72.66:8080/api/Reservation/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             alert("Se ha eliminado la reserva");
@@ -745,7 +745,7 @@ function editarInformacionAdmin(){
             contentType: "application/json; charset=utf-8",
             datatype:"JSON",
             data: JSON.stringify(admin),
-            url:"http://localhost:8080/api/Admin/update",
+            url:"http://150.230.72.66:8080/api/Admin/update",
             success:function(respuesta){
                 console.log(respuesta);
                 alert("Se ha actualizado el usuario");
@@ -769,7 +769,7 @@ function borrarElementoAdmin(id){
         contentType: "application/json; charset=utf-8",
         datatype: "JSON",
         data: JSON.stringify(admin),
-        url: "http://localhost:8080/api/Admin/" + id,
+        url: "http://150.230.72.66:8080/api/Admin/" + id,
         success: function (respuesta) {
             console.log(respuesta);
             alert("Se ha eliminado el usuario");
